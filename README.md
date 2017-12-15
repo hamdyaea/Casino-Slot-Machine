@@ -2,7 +2,7 @@
 
 ## What's this game ?  
 
-This is a casino slot machine simulator. Everytile you play, you bet 100$ of your money.  
+This is a casino slot machine simulator. Everytime you play, you bet 100$ of your money.  
 
 ## Rules of the game  
 
