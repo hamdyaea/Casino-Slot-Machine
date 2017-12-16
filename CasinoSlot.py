@@ -16,10 +16,8 @@ user_money = 100
 slot1 = 1
 slot2 = 2
 slot3 = 3
-B1 = 0
-B2 = 0
-B3 = 0
-B4 = 0
+casino = 0
+casinoCalc = 0
 bet= 0
 
 def game():
@@ -61,14 +59,24 @@ def result():
     else:
         user_money= user_money*0
 
+def casinoWin():
+    global casino, casinoCalc
+
+    if bet < user_money :
+         casinoCalc = user_money - bet
+         casino = "The casino loose "+str(casinoCalc)+str(" $")
+    else:
+         casinoCalc = bet - user_money
+         casino = "The casino win " + str(casinoCalc) + str(" $")
 
 def begin():
     result()
+    casinoWin()
     wave_obj = sa.WaveObject.from_wave_file(slotSound)
     play_obj = wave_obj.play()
     play_obj.wait_done()
     image = slot1,slot2,slot3
-    msg = "Do you want to replay ? \n\nYou have win "+str(user_money)+str(" $ ")+str("\n\nYou have spend ")+str(bet)+str(" $ of your money")
+    msg = "Do you want to replay ? \n\nYou have win "+str(user_money)+str(" $ ")+str("\n\nYou have spend ")+str(bet)+str(" $ of your money")+str("\n\n")+str(casino)
     choices = ["Yes","No"]
     reply = buttonbox(msg, image=image, choices=choices)
 
@@ -80,6 +88,8 @@ def begin():
         begin()
     else:
         sys.exit(0)
+
+
 
 def enter():
     msg = "                        Casino Slot Machine\n\n Rules of the game :\n\n1) You Begin with 100$\n\n2) You always have the choice to leave or replay. \n\n  If You leave you can keep the money you have got\n\n3) Everytime you replay, you bet 100$\n\n4) 2 x the same = your money + 200$, 3 x the same = your money +300$\n\n  All different = you loose everything"
