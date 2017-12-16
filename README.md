@@ -32,6 +32,12 @@ easygui at least version 0.98
 sudo python3 -m pip install --upgrade easygui  
 ```  
 
+install simpleaudio  
+
+```sh
+pip3 install simpleaudio  
+```  
+
 ## How to launch the game :  
 
 ```sh

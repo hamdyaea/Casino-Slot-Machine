@@ -3,11 +3,14 @@
 from easygui import *
 import random
 import sys
+import simpleaudio as sa
 
 bar_tk = "./images/bar.gif"
 cherry_tk = "./images/cherry.gif"
 seven_tk = "./images/lucky-seven.gif"
 slot_machine = "./images/slot.gif"
+slotSound = "./sounds/SlotMachine.wav"
+
 
 user_money = 100
 slot1 = 1
@@ -61,10 +64,14 @@ def result():
 
 def begin():
     result()
+    wave_obj = sa.WaveObject.from_wave_file(slotSound)
+    play_obj = wave_obj.play()
+    play_obj.wait_done()
     image = slot1,slot2,slot3
-    msg = "Do you want to replay ? \n\nYou have win "+str(user_money)+str(" $ ")+str("\n\nYou have spend ")+str(bet)+str(" of your money")
+    msg = "Do you want to replay ? \n\nYou have win "+str(user_money)+str(" $ ")+str("\n\nYou have spend ")+str(bet)+str(" $ of your money")
     choices = ["Yes","No"]
     reply = buttonbox(msg, image=image, choices=choices)
+
     if reply == "Yes":
         #print(user_money)
         if user_money < 100:
