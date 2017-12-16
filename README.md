@@ -11,7 +11,7 @@ This is a casino slot machine simulator. Everytime you play, you bet 100$ of you
 If You leave you can keep the money you have got   
 3) Everytime you replay, you bet 100$  
 4) 2 x the same = your money + 200$, 3 x the same = your money +300$   
-   all different = you loose everything"  
+   All different = you loose everything   
 
 
 
