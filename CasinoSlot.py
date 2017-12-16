@@ -92,7 +92,7 @@ def begin():
 
 
 def enter():
-    msg = "                        Casino Slot Machine\n\n Rules of the game :\n\n1) You Begin with 100$\n\n2) You always have the choice to leave or replay. \n\n  If You leave you can keep the money you have got\n\n3) Everytime you replay, you bet 100$\n\n4) 2 x the same = your money + 200$, 3 x the same = your money +300$\n\n  All different = you loose everything"
+    msg = "                        Casino Slot Machine\n\n Rules of the game :\n\n1) You Begin with 100$\n\n2) You always have the choice to leave or replay. \n\n  If You leave you can keep the money that you have win\n\n3) Everytime you replay, you bet 100$\n\n4) 2 x the same = your money + 200$, 3 x the same = your money +300$\n\n  All different = you loose everything"
     choices = ["Begin and bet the first 100$"]
     reply = buttonbox(msg, image=slot_machine, choices=choices)
     if reply == "Begin and bet the first 100$":
