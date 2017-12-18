@@ -44,6 +44,10 @@ Install simpleaudio
 pip3 install simpleaudio  
 ```  
 
+if the installation of simplaudio fail on Windows install a C++ compiler :  
+
+http://landinghub.visualstudio.com/visual-cpp-build-tools
+
 ## How to launch the game :  
 
 ```sh
