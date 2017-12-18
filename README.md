@@ -32,7 +32,13 @@ easygui at least version 0.98
 sudo python3 -m pip install --upgrade easygui  
 ```  
 
-install simpleaudio  
+Upgrade pip and setuptools: 
+
+```sh
+pip install --upgrade pip setuptools 
+```  
+
+Install simpleaudio  
 
 ```sh
 pip3 install simpleaudio  
